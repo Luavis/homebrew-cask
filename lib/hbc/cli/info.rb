@@ -32,7 +32,7 @@ class Hbc::CLI::Info < Hbc::CLI::Base
     if cask.installed?
       cask.versions.each do |version|
         versioned_staged_path = cask.caskroom_path.join(version)
-        puts "#{versioned_staged_path} (#{versioned_staged_path.abv})"
+        puts "#{versioned_staged_path} (#{versioned_staged_path.abv})" if versioned_staged_path.exist?
       end
     else
       puts "Not installed"
