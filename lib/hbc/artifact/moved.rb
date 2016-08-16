@@ -1,6 +1,6 @@
-require "hbc/artifact/relocated"
+require "hbc/artifact/abstract_relocated"
 
-class Hbc::Artifact::Moved < Hbc::Artifact::Relocated
+class Hbc::Artifact::Moved < Hbc::Artifact::AbstractRelocated
   def summary
     contents = @cask.artifacts[self.class.artifact_dsl_key].map { |artifact|
       summarize_artifact(artifact)

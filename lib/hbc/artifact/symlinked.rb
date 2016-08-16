@@ -1,6 +1,6 @@
-require "hbc/artifact/relocated"
+require "hbc/artifact/abstract_relocated"
 
-class Hbc::Artifact::Symlinked < Hbc::Artifact::Relocated
+class Hbc::Artifact::Symlinked < Hbc::Artifact::AbstractRelocated
   def self.islink?(path)
     path.symlink?
   end
